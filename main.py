@@ -7,9 +7,9 @@ class Hotel:
         self.hotel_id  = hotel_id
         self.name = df.loc[df["id"] == self.hotel_id, "name"].squeeze()
     def book(self):
-        """Books a hotel by changing its availabilit to no"""
+        """Books a hotel by changing its availability to no"""
         df.loc[df["id"] == self.hotel_id, "available"] = "no"
-        df.to_csv("hotels.csv", index=False ) # index = False, Python does not add another column
+        df.to_csv("hotels.csv", index=False) # index = False, Python does not add another column
     def available(self):
         """Checks if the hotel is available"""
         availability = df.loc[df["id"] == self.hotel_id, "available"].squeeze() # we get yes/no in return
