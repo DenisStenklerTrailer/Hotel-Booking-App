@@ -36,11 +36,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\stenklerd\Desktop\DENIS\Github\Hotel-Booking-App\Training" />
       <recent name="C:\Users\stenklerd\Desktop\DENIS\Github\Hotel-Booking-App" />
+      <recent name="C:\Users\stenklerd\Desktop\DENIS\Github\Hotel-Booking-App\Training" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Training">
+  <component name="RunManager" selected="Python.main">
     <configuration name="Training" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Hotel-Booking-App" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -85,8 +85,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Training" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.Training" />
       </list>
     </recent_temporary>
   </component>
