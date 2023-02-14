@@ -27,6 +27,15 @@ class Hotel:
     def get_hotel_count(cls, data):
         return len(data)
 
+    # MAGIC METHODS
+    def __eq__(self, other):
+        if self.hotel_id == other.hotel_id
+            return True
+        else:
+            return False
+        
+
+
 
 class ReservationTicket:
     def __init__(self, customer_name, hotel_object):
@@ -48,6 +57,13 @@ class ReservationTicket:
         name = name.title()
         return name
 
+    @staticmethod
+    def convert(amount):
+        return amount * 1.2
+
+
+
+
 hotel1 = Hotel(hotel_id="188")
 hotel2 = Hotel(hotel_id="134")
 
@@ -66,3 +82,6 @@ print(Hotel.watermark)
 ticket = ReservationTicket(customer_name="john smith ", hotel_object=hotel1) # property
 print(ticket.the_customer_name) # Actually behaves like a variable
 print(ticket.generate())
+
+converted = ReservationTicket.convert(10) # static  method
+print(converted)
