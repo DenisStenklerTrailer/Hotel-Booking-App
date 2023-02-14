@@ -1,4 +1,5 @@
 import pandas
+from abc import ABC, abstractmethod
 
 df = pandas.read_csv("hotels.csv", dtype={'id': str})
 
@@ -33,11 +34,17 @@ class Hotel:
             return True
         else:
             return False
-        
+
+# Abstract class means that all classes with Ticket in our case MUST include the generate()
+# This is actually to remind the programmer that we need to use the generate() otherwise we get an error
+class Ticket(ABC):
+
+    @abstractmethod
+    def generate(self):
+        pass
 
 
-
-class ReservationTicket:
+class ReservationTicket(Ticket):
     def __init__(self, customer_name, hotel_object):
         self.costumer_name = customer_name
         self.hotel = hotel_object
@@ -62,6 +69,11 @@ class ReservationTicket:
         return amount * 1.2
 
 
+class DigitalTicket(Ticket):
+    def generate(self):
+        return "Hello, this is your digital ticket"
+    def download(self):
+        pass
 
 
 hotel1 = Hotel(hotel_id="188")
