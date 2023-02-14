@@ -36,11 +36,17 @@ class ReservationTicket:
         content = f"""
         Thank you for your reseration!
         Here is your reservation data:
-        Name: {self.costumer_name}
+        Name: {self.the_customer_name}
         ID: {self.hotel.hotel_id}
         Hotel: {self.hotel.name}
         """
         return content
+
+    @property
+    def the_customer_name(self):
+        name = self.costumer_name.strip()
+        name = name.title()
+        return name
 
 hotel1 = Hotel(hotel_id="188")
 hotel2 = Hotel(hotel_id="134")
@@ -56,3 +62,7 @@ print(hotel1.watermark) # Class variable
 print(hotel2.watermark) # Class variable
 
 print(Hotel.watermark)
+
+ticket = ReservationTicket(customer_name="john smith ", hotel_object=hotel1) # property
+print(ticket.the_customer_name) # Actually behaves like a variable
+print(ticket.generate())
